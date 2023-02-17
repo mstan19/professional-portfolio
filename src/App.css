@@ -11,6 +11,12 @@
     font-family: "Raleway", sans-serif;
 }
 
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .activeBtn {
     opacity: 1 !important;
 }
