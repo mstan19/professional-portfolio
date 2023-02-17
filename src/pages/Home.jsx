@@ -7,7 +7,9 @@ const Home = () => {
 
     return (
         <div className="bg-purple-100">
-          hi home
+          <h1>Melissa Stan</h1>
+          <p>Full Stack Web Developer</p>
+          <button>About Me</button>
         </div>
     );
 };
