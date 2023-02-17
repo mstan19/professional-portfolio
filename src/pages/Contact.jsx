@@ -7,7 +7,6 @@ const Contact = () => {
 
     return (
         <div className="bg-green-100">
-          hi contact
         </div>
     );
 };

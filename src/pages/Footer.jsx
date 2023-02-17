@@ -7,7 +7,6 @@ const Footer = () => {
 
     return (
         <div className="bg-gray-100">
-          hi footer
         </div>
     );
 };

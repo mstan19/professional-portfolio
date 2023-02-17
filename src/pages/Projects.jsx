@@ -6,7 +6,7 @@ const Projects = () => {
 
     return (
         <div className="bg-blue-100">
-          hi 
+          hi projects
         </div>
     );
 };
