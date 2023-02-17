@@ -9,11 +9,11 @@ const Navbar = () => {
 	let [open, setOpen] = useState(false);
 
 	const pages = [
-		{
-			title: "Home",
-			name: "home",
-			link: "/",
-		},
+		// {
+		// 	title: "Home",
+		// 	name: "home",
+		// 	link: "/",
+		// },
 		{
 			title: "About Me",
 			name: "aboutMe",
@@ -55,8 +55,8 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className="shadow-md w-full top-0 left-0">
-			<div className="md:flex items-center py-4 px-5 md:grid md:grid-cols-3">
+		<nav className="h-50 z-10 bg-stone-100 fixed shadow-md w-full top-0 left-0">
+			<div className=" md:flex items-center py-4 px-5 md:grid md:grid-cols-3">
 				<h1 className="text-5xl pb-2">
 					<Link to="/">
 					Melissa
@@ -68,7 +68,7 @@ const Navbar = () => {
 					<span name={open ? "close":"menu"}><FiMenu /></span>
 				</div>
 
-				<div className={`md:block md:grid items-center md:flex md:justify-center md:grid-cols-2 md:col-span-2 ${open ? "hidden" : "block border-t-2 border-black-300 md:border-t-0"}`}>
+				<div className={`md:block bg-white md:bg-stone-100 p-3 md:grid items-center md:flex md:justify-center md:grid-cols-2 md:col-span-2 ${open ? "hidden" : "block border-t-2 border-black-300 md:border-t-0"}`}>
 					{/* Options */}
 					<ul className="md:flex md:justify-center">
 						{pages.map((page) => (
@@ -105,7 +105,7 @@ const Navbar = () => {
 function NavLink({ to, children, ...props}) {
 
     return(
-        <li className={`nav-link-btn ${useLocation().pathname === to ? "activeBtn underline text-red-700 decoration-red-700 decoration-1 " : "hover:text-red-700 hover:underline hover:underline-offset-4"}`}>
+        <li className={`nav-link-btn ${useLocation().pathname === to ? "activeBtn underline text-red-300 decoration-red-300 decoration-1 " : "hover:text-red-700 hover:underline hover:underline-offset-4"}`}>
             <Link to={to} {...props} className="text-xl md:px-3.5 py-3 md:py-0 flex inline-block md:inline">
                 {children}
             </Link>

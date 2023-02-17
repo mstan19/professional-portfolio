@@ -11,10 +11,10 @@ import Resume from "./pages/Resume";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App relative">
 			<Router>
 				<Navbar />
-				<div className="page-container">
+				<div className="page-container h-screen pt-24">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/projects" element={<Projects />} />
