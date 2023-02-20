@@ -82,7 +82,7 @@ const Navbar = () => {
 					</ul>
 
 					{/* icons */}
-					<ul className="p-2 flex justify-between md:justify-end  md:float-right">
+					<ul className="p-2 flex justify-between md:justify-end md:float-right">
 						{icons.map((icon) => (
 							<Link
 							className="inline-block md:px-1"

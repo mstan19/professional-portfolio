@@ -6,7 +6,7 @@ const Footer = () => {
     
 
     return (
-        <footer className="bg-stone-100 shadow-inner absolute bottom-0 w-full h-12 items-center flex justify-center">
+        <footer className="flex-grow bg-stone-100 shadow-inner fixed inset-x-0 bottom-0 w-full h-12 items-center flex justify-center">
             <hr className="border-gray-200 dark:border-gray-700" />
             <span className="block text-base text-gray-500 sm:text-center dark:text-gray-400">© Melissa Stan. All Rights Reserved.</span>
         </footer>
