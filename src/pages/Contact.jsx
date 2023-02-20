@@ -34,6 +34,13 @@ const Contact = () => {
 		},
 	]
 
+	const checkingAndSending = (event) => {
+		event.preventDefault();
+		// handleSubmit((data) => console.log(data));
+		if (!errors) {
+			sendEmail();
+		}
+	}
 
 	// update state based on form input changes
 	// const handleInputChange = (event) => {
@@ -43,8 +50,8 @@ const Contact = () => {
 	// };
 	console.log("errors", errors)
 
-	const sendEmail = async (event) => {
-		event.preventDefault();
+	const sendEmail = async (data) => {
+		 console.log(data)
 			emailjs.sendForm('service_9d0xx8q', 'template_1908rlg', form.current, '3j4PV5samtA2z-FeV')
 			.then((result) => {
 				console.log(result.text);
@@ -52,13 +59,14 @@ const Contact = () => {
 			}, (error) => {
 				console.log(error.text);
 			});
+			console.log("at the end")
 	};
 	return (
 		<div className="">
 			<h1 className="text-4xl font-normal text-center m-6">Let's Work Together!</h1>
-			<p className="text-lg m-6">Interested in working together? Message me</p>
+			<p className="text-lg m-6">Interested in working together? Message me using this form below. Speak to you soon!</p>
 			<div className="container mx-auto">
-				<form ref={form} onSubmit={handleSubmit((data) => console.log(data))} className="flex flex-col items-center bg-white p-0 m-2 md:m-0">
+				<form ref={form} onSubmit={handleSubmit(sendEmail)} className="flex flex-col items-center bg-white p-0 m-2 md:m-0">
 					<div className="mb-4 md:w-1/2 w-full">
 						<label
 							className="block text-black-700 text-lg mb-2"
