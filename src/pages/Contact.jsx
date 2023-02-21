@@ -34,20 +34,27 @@ const Contact = () => {
 		
 	// };
 
+	
 	const myContactInfomations = [
 		{
 			info: "melissastan91@gmail.com",
+			category: "email",
 			title: "My Email:",
+			href: "mailto:melissastan91@gmail.com",
 			icon: <TfiEmail />,
 		},
 		{
 			info: "(404)447-9089",
+			category: "phoneNumber",
 			title: "My Phone Number:",
+			href: "tel:404-447-9089",
 			icon: <ImPhone />,
 		},
 		{
 			info: "Atlanta, GA",
+			category: "location",
 			title: "Location:",
+			href: "#",
 			icon: <GrMapLocation />,
 		},
 	]
@@ -176,16 +183,19 @@ const sendEmail = async (data) => {
 				<div className="grid grid-cols-1 md:grid-cols-3 mt-16 mb-28 md:mb-0">
 					{myContactInfomations.map((myContact) => (
 						<div className="text-2xl" key={myContact.info}>
-							<div className="flex justify-center">
-								<div className="w-10 h-10 bg-red-200 rounded-full relative flex justify-center text-center">
-									<h2 className="text-xl grid place-items-center">{myContact.icon}</h2>
+							<a href={myContact.href}>
+								<div className="flex justify-center">
+									<div className="w-10 h-10 bg-red-200 rounded-full relative flex justify-center text-center">
+										<h2 className="text-xl grid place-items-center">{myContact.icon}</h2>
+									</div>
 								</div>
-							</div>
-							<div>
-								<div className="flex justify-center">{myContact.title}</div>
-								<div className="flex justify-center">{myContact.info}</div>
-							</div>
+								<div>
+									<div className="flex justify-center">{myContact.title}</div>
+									<div className="flex justify-center">{myContact.info}</div>
+								</div>
+							</a>
 						</div>
+						
 					))}
 				</div>
 			</div>
