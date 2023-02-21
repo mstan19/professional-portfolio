@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { ImPhone } from "react-icons/im";
@@ -6,6 +6,10 @@ import { TfiEmail } from "react-icons/tfi";
 import { GrMapLocation } from "react-icons/gr";
 import emailjs from '@emailjs/browser';
 import Reaptcha from 'reaptcha';
+import { useReward } from 'react-rewards';
+import Confetti from 'react-dom-confetti';
+
+
 // require("dotenv").config();
 
 
@@ -16,6 +20,7 @@ const Contact = () => {
 	const [buttonMessage, setButtonMessage]= useState(false);
 	const [captchaVerified, setCaptchaVerified] = useState(false);
 	const [emailSuccess, setEmailSuccess] = useState(false);
+	const { reward, isAnimating } = useReward("rewardId", "confetti");
 
 	const onVerify = recaptchaResponse => {
 		setCaptchaVerified(true)
@@ -24,16 +29,6 @@ const Contact = () => {
 	const textChange = () => {
 		setButtonMessage(!buttonMessage)
 	}
-	// const successMessage = async () => {
-	// 	return(
-	// 	<div class="bg-green-500 border-l-4 border-green-700 text-green-700 p-4" role="alert">
-	// 		<p class="font-bold">Success!</p>
-	// 		<p>Your message has been sent.</p>
-	// 	</div>
-	// 	)
-		
-	// };
-
 	
 	const myContactInfomations = [
 		{
@@ -59,22 +54,31 @@ const Contact = () => {
 		},
 	]
 
+	useEffect (() => {
+		if (emailSuccess) {
+			reward()
+		}
+	  }, [emailSuccess])
 
-console.log("errors", errors)
+	console.log("errors", errors)
 	
 
-const sendEmail = async (data) => {
-	console.log(data)
-	   emailjs.sendForm('service_9d0xx8q', 'template_1908rlg', form.current, '3j4PV5samtA2z-FeV')
-	   .then((result) => {
-		   console.log(result.text);
-		   console.log("Message was sent!");
-		   setEmailSuccess(true);
-	   }, (error) => {
-		   console.log(error.text);
-	   });
-	   console.log("at the end")
-};
+	const sendEmail = async (data) => {
+		console.log(data)
+		   emailjs.sendForm('service_9d0xx8q', 'template_1908rlg', form.current, '3j4PV5samtA2z-FeV')
+		   .then((result) => {
+			   console.log(result.text);
+			   console.log("Message was sent!");
+			   setEmailSuccess(true);
+		   }, (error) => {
+			   console.log(error.text);
+		   });
+		
+		setEmailSuccess(true);
+		console.log("at the end")
+	};
+	
+
 	return (
 		<div className="">
 			<h1 className="text-4xl font-normal text-center m-6">Let's Work Together!</h1>
@@ -166,17 +170,18 @@ const sendEmail = async (data) => {
 					</div>
 
 					<Reaptcha 
-					sitekey="6LcDxpwkAAAAAMYeHaSLMfrnTZbz1mZXAnka-o1B" 
-					onVerify={onVerify} 
+						sitekey="6LcDxpwkAAAAAMYeHaSLMfrnTZbz1mZXAnka-o1B" 
+						onVerify={onVerify} 
 					/>
-
+					 
 					<button
 						className={`w-1/3 shadow-lg rounded-lg hover:bg-red-400 text-white mt-4 py-2 px-4 focus:outline-none focus:shadow-outline ${emailSuccess ? "bg-emerald-500 hover:bg-green-400" : "bg-red-300 hover:bg-red-400"} `}
 						type="submit"
 						value="Send"
-						disabled={!captchaVerified}
+						disabled={!captchaVerified || isAnimating}
 					>
-						{buttonMessage ? "SUBMIT" : "SUCCESS"}
+						<span id="rewardId" style={{width: 2, height: 2}}>{emailSuccess ? "SUCCESS" : "SUBMIT"}</span>	
+						
 					</button>
 				</form>
 				
