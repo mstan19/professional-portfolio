@@ -13,6 +13,7 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.4",
     "react-scripts": "^5.0.1",
+    "reaptcha": "^1.12.1",
     "styled-components": "^5.3.6"
   },
   "scripts": {
