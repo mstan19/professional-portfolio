@@ -4,14 +4,14 @@ import pic from "./../assets/cherrybloosom.jpeg";
 
 
 const Home = () => {
-      const backgroundPic={
-        backgroundImage: `url(${pic})`,
-        height:'80vh',
-        // marginTop:'0px',
-        // fontSize:'50px',
-        backgroundSize: 'cover',
-        // backgroundRepeat: 'no-repeat',
-    };
+  const backgroundPic={
+    backgroundImage: `url(${pic})`,
+    // height:'80vh',
+    // marginTop:'0px',
+    // fontSize:'50px',
+    backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+  };
 
     return (
         <div className="flex flex-col justify-center text-center">

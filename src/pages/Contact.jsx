@@ -65,14 +65,14 @@ const Contact = () => {
 
 	const sendEmail = async (data) => {
 		console.log(data)
-		   emailjs.sendForm('service_9d0xx8q', 'template_1908rlg', form.current, '3j4PV5samtA2z-FeV')
-		   .then((result) => {
-			   console.log(result.text);
-			   console.log("Message was sent!");
-			   setEmailSuccess(true);
-		   }, (error) => {
-			   console.log(error.text);
-		   });
+		// emailjs.sendForm('service_9d0xx8q', 'template_1908rlg', form.current, '3j4PV5samtA2z-FeV')
+		// .then((result) => {
+		// 	console.log(result.text);
+		// 	console.log("Message was sent!");
+		// 	setEmailSuccess(true);
+		// }, (error) => {
+		// 	console.log(error.text);
+		// });
 		
 		setEmailSuccess(true);
 		console.log("at the end")
@@ -180,7 +180,7 @@ const Contact = () => {
 						value="Send"
 						disabled={!captchaVerified || isAnimating}
 					>
-						<span id="rewardId" style={{width: 2, height: 2}}>{emailSuccess ? "SUCCESS" : "SUBMIT"}</span>	
+						<span id="rewardId" style={{width: 2, height: 2}}>{emailSuccess ? "SUCCESSFULLY SENT" : "SUBMIT"}</span>	
 						
 					</button>
 				</form>
@@ -195,7 +195,7 @@ const Contact = () => {
 									</div>
 								</div>
 								<div>
-									<div className="flex justify-center">{myContact.title}</div>
+									{/* <div className="flex justify-center">{myContact.title}</div> */}
 									<div className="flex justify-center">{myContact.info}</div>
 								</div>
 							</a>
