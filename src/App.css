@@ -110,4 +110,16 @@
     opacity:0.5;
 }
 
+#petal {
+    display: inline-block;
+    width: 0; height: 0;
+    padding: 20px 9px;
+    background: rgba(0,0,100,.4);
+    transform: rotate(72deg);
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background: rgba(245, 30, 188, 0.4);
+    position:absolute;
+  }
+
 

@@ -175,12 +175,14 @@ const Contact = () => {
 					/>
 					 
 					<button
-						className={`w-1/3 shadow-lg rounded-lg hover:bg-red-400 text-white mt-4 py-2 px-4 focus:outline-none focus:shadow-outline ${emailSuccess ? "bg-emerald-500 hover:bg-green-400" : "bg-red-300 hover:bg-red-400"} `}
+						className={`w-1/3 relative px-6 py-3 font-bold text-black group mt-7`}
 						type="submit"
 						value="Send"
 						disabled={!captchaVerified || isAnimating}
 					>
-						<span id="rewardId" style={{width: 2, height: 2}}>{emailSuccess ? "SUCCESSFULLY SENT" : "SUBMIT"}</span>	
+							<span className={`absolute inset-0 w-full h-11 transition duration-300 ease-out transform -translate-x-2 -translate-y-2 ${emailSuccess ? "bg-emerald-500 hover:bg-green-400" : "bg-red-300 hover:bg-red-400"} group-hover:translate-x-0 group-hover:translate-y-0`} ></span>
+							<span  className="absolute inset-0 w-full  border-4 border-black h-11"></span>
+							<span id="rewardId" className="relative">{emailSuccess ? "SUCCESSFULLY SENT" : "SUBMIT"}</span>
 						
 					</button>
 				</form>
