@@ -6,7 +6,20 @@ const Resume = () => {
 
     return (
         <div className="bg-orange-100">
-          hi resume
+            <h1>Resume</h1>
+            <main>
+              {/* Experience */}
+              <section></section>
+
+              {/* Education */}
+              <section></section>
+
+              {/* Projects */}
+              <section></section>
+
+              {/* Skills */}
+              <section></section>
+            </main>
         </div>
     );
 };

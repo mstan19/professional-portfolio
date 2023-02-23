@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./pages/Projects";
@@ -11,10 +11,10 @@ import Resume from "./pages/Resume";
 
 function App() {
 	return (
-		<div className="App relative">
+		<div className="App h-screen">
 			<Router>
 				<Navbar />
-				<div className="page-container h-screen pt-24">
+				<div className="h-full mt-16 ">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/projects" element={<Projects />} />
