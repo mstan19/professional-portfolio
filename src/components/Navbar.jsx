@@ -6,7 +6,7 @@ import { FiMenu } from "react-icons/fi";
 
 
 const Navbar = () => {
-	let [open, setOpen] = useState(false);
+	let [open, setOpen] = useState(true);
 
 	const pages = [
 		// {
@@ -55,7 +55,7 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className="h-50 z-50 bg-stone-100 fixed shadow-md w-full top-0 left-0">
+		<nav className="h-16 z-50 bg-stone-100 fixed shadow-md w-full top-0 left-0">
 			<div className=" md:flex items-center px-5 md:grid md:grid-cols-3">
 				<h1 className="text-5xl pb-2">
 					<Link to="/">
