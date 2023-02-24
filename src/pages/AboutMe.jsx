@@ -6,7 +6,7 @@ import gradPic from "./../assets/gradpic.jpg";
 const AboutMe = () => {
 
 	return (
-		<div className="aboutme-page bg-red-100">
+		<div className="aboutme-page bg-red-50">
 			{/* Card */}
 			<div className="card">
 				<div className="imgBox">

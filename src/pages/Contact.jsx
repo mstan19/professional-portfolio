@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 import Reaptcha from 'reaptcha';
 import { useReward } from 'react-rewards';
 import Confetti from 'react-dom-confetti';
-
+import divider from "../assets/divider.png";
 
 // require("dotenv").config();
 
@@ -81,8 +81,9 @@ const Contact = () => {
 
 	return (
 		<div className="">
-			<h1 className="text-4xl font-normal text-center m-6">Let's Work Together!</h1>
-			<p className="text-lg m-6">Interested in working together? Message me using this form below. Speak to you soon!</p>
+			<h1 className="text-4xl font-normal text-center pt-4">Let's Work Together!</h1>
+			<img className="mx-auto" src={divider} alt="divider"/>
+			<p className=" italic m-6 text-center">Interested in working together? Message me using this form below. Speak to you soon!</p>
 			<div className="container mx-auto">
 				<form 
 				ref={form} 
@@ -182,7 +183,7 @@ const Contact = () => {
 					>
 							<span className={`absolute inset-0 w-full h-11 transition duration-300 ease-out transform -translate-x-2 -translate-y-2 ${emailSuccess ? "bg-emerald-500 hover:bg-emerald-400" : "bg-red-300 hover:bg-red-400"} group-hover:translate-x-0 group-hover:translate-y-0`} ></span>
 							<span  className="absolute inset-0 w-full  border-4 border-black h-11"></span>
-							<span id="rewardId" className="relative">{emailSuccess ? "SUCCESSFULLY SENT" : "SUBMIT"}</span>
+							<span id="rewardId" className="relative">{emailSuccess ? "SUCCESSFULLY SENT!" : "SUBMIT"}</span>
 						
 					</button>
 				</form>

@@ -82,26 +82,26 @@ const Projects = () => {
 					<img className="object-cover h-full w-full" src={imageSrc} alt="projectsImage" />
 				</div>
 	}
+
 	// (project.summary, project.title, project.technologies, project.github, project.deployLink)
 	const textBlock =(textSummary, textTitle, textTech, textGithub, textDeployLink) => {
 		return <div className="sm:col-span-2 w-full h-52 z-10">
-				<div className="relative px-6 py-3 font-bold text-black group h-full w-full block">
-					<span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-4 -translate-y-4 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-					<span className="absolute inset-0 w-full h-full border-4 border-black">
-						<div className="text-center font-lg h-10">{textTitle}</div>
-						<div className="italic text-center">{textSummary}</div>
-						<div className="h-30 w-30 flex justify-center">
-							<a href={textGithub} className="relative pt-3 mt-12 h-10 w-10 mr-6" target="_blank" rel="noreferrer" >
-								<button class="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><TbBrandGithub /></button>
-							</a>
-							<a href={textDeployLink} className="relative pt-3 mt-12 h-10 w-10" target="_blank" rel="noreferrer" >
-								<button class="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
-							</a>
-						</div>
-					</span>
-
-				</div>
-			</div>	
+					<div className="relative px-6 py-3 font-bold text-black group h-full w-full block">
+						<span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-4 -translate-y-4 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+						<span className="absolute inset-0 w-full h-full border-4 border-black">
+							<div className="text-center font-lg h-10">{textTitle}</div>
+							<div className="italic text-center">{textSummary}</div>
+							<div className="h-30 w-30 flex justify-center">
+								<a href={textGithub} className="relative pt-3 mt-12 h-10 w-10 mr-6" target="_blank" rel="noreferrer" >
+									<button className="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><TbBrandGithub /></button>
+								</a>
+								<a href={textDeployLink} className="relative pt-3 mt-12 h-10 w-10" target="_blank" rel="noreferrer" >
+									<button className="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
+								</a>
+							</div>
+						</span>
+					</div>
+				</div>	
 	} 	
 	
 	const [currentGif, setCurrentGif] = useState(gif1);
