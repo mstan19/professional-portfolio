@@ -80,7 +80,7 @@ const Contact = () => {
 	
 
 	return (
-		<div className="">
+		<div className="bg-red-50">
 			<h1 className="text-4xl font-normal text-center pt-4">Let's Work Together!</h1>
 			<img className="mx-auto" src={divider} alt="divider"/>
 			<p className=" italic m-6 text-center">Interested in working together? Message me using this form below. Speak to you soon!</p>
@@ -89,7 +89,7 @@ const Contact = () => {
 				ref={form} 
 				onSubmit={handleSubmit(sendEmail)} 
 
-				className="flex flex-col items-center bg-white p-0 m-2 md:m-0">
+				className="flex flex-col items-center bg-red-50 p-0 m-2 md:m-0">
 					<div className="mb-4 md:w-1/2 w-full">
 						<label
 							className="block text-black-700 text-lg mb-2"
