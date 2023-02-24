@@ -80,7 +80,7 @@ const Contact = () => {
 	
 
 	return (
-		<div className="bg-red-50">
+		<div className="bg-red-50 h-full">
 			<h1 className="text-4xl font-normal text-center pt-4">Let's Work Together!</h1>
 			<img className="mx-auto" src={divider} alt="divider"/>
 			<p className=" italic m-6 text-center">Interested in working together? Message me using this form below. Speak to you soon!</p>
@@ -188,10 +188,10 @@ const Contact = () => {
 					</button>
 				</form>
 				
-				<div className="grid grid-cols-1 md:grid-cols-3 mt-16 mb-28 md:mb-0">
+				<div className="grid grid-cols-1 md:grid-cols-3 mt-16 mb-28 md:mb-0 pb-20">
 					{myContactInfomations.map((myContact) => (
 						<div className="text-2xl" key={myContact.info}>
-							<a href={myContact.href}>
+							<Link to={myContact.href}>
 								<div className="flex justify-center">
 									<div className="w-10 h-10 bg-red-200 rounded-full relative flex justify-center text-center">
 										<h2 className="text-xl grid place-items-center">{myContact.icon}</h2>
@@ -201,7 +201,7 @@ const Contact = () => {
 									{/* <div className="flex justify-center">{myContact.title}</div> */}
 									<div className="flex justify-center">{myContact.info}</div>
 								</div>
-							</a>
+							</Link>
 						</div>
 						
 					))}

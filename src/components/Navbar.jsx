@@ -25,7 +25,7 @@ const Navbar = () => {
 			link: "/projects",
 		},
 		{
-			title: "Resume",
+			title: "Resumé",
 			name: "resume",
 			link: "/resume",
 		},

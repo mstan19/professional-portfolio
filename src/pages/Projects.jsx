@@ -92,12 +92,12 @@ const Projects = () => {
 							<div className="text-center font-lg h-10">{textTitle}</div>
 							<div className="italic text-center">{textSummary}</div>
 							<div className="h-30 w-30 flex justify-center">
-								<a href={textGithub} className="relative pt-3 mt-12 h-10 w-10 mr-6" target="_blank" rel="noreferrer" >
+								<Link to={textGithub} className="relative pt-3 mt-12 h-10 w-10 mr-6" target="_blank" rel="noreferrer" >
 									<button className="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><TbBrandGithub /></button>
-								</a>
-								<a href={textDeployLink} className="relative pt-3 mt-12 h-10 w-10" target="_blank" rel="noreferrer" >
+								</Link>
+								<Link to={textDeployLink} className="relative pt-3 mt-12 h-10 w-10" target="_blank" rel="noreferrer" >
 									<button className="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
-								</a>
+								</Link>
 							</div>
 						</span>
 					</div>
@@ -128,7 +128,7 @@ const Projects = () => {
 	};
 
 	return (
-		<div className="relative h-full z-0 bg-red-50">
+		<div className="relative z-0 bg-red-50 pb-36">
 
 			{/* Container */}
 			<div className="mx-8">

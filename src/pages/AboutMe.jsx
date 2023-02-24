@@ -9,7 +9,7 @@ import pic from "./../assets/cherrybloosom.jpeg";
 const AboutMe = () => {
 
 	return (
-		<div className="bg-red-50">
+		<div className="bg-red-50 h-full">
 
 			<h1 className="text-4xl font-normal text-center pt-4">About Me</h1>
 			<img className="mx-auto mb-10" src={divider} alt="divider"/>			
