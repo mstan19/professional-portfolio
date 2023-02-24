@@ -7,7 +7,8 @@ import gif1 from "../assets/gifs/project1.gif";
 import gif2 from "../assets/gifs/project2.gif";
 import gif3 from "../assets/gifs/project3.gif";
 import divider from "../assets/divider.png";
-
+import { TbBrandGithub } from "react-icons/tb";
+import { IoRocketSharp } from "react-icons/io5";
 
 const Projects = () => {
 	const projects = [
@@ -82,17 +83,22 @@ const Projects = () => {
 				</div>
 	}
 	// (project.summary, project.title, project.technologies, project.github, project.deployLink)
-	const textBlock =(textSummary, title, tech, github, deployLink) => {
+	const textBlock =(textSummary, textTitle, textTech, textGithub, textDeployLink) => {
 		return <div className="sm:col-span-2 w-full h-52 z-10">
 				<div className="relative px-6 py-3 font-bold text-black group h-full w-full block">
 					<span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-4 -translate-y-4 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
-					<span className="absolute inset-0 w-full h-full border-4 border-black"></span>
-					<div className="relative">{title}</div>
-					<div className="relative">{textSummary}</div>
-					<div className="relative">{tech}</div>
-					<div className="relative">{github}</div>
-					<div className="relative">{deployLink}</div>
-
+					<span className="absolute inset-0 w-full h-full border-4 border-black">
+						<div className="text-center font-lg h-10">{textTitle}</div>
+						<div className="italic text-center">{textSummary}</div>
+						<div className="h-30 w-30 flex justify-center">
+							<a href={textGithub} className="relative pt-3 mt-12 h-10 w-10 mr-6" target="_blank" rel="noreferrer" >
+								<button class="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><TbBrandGithub /></button>
+							</a>
+							<a href={textDeployLink} className="relative pt-3 mt-12 h-10 w-10" target="_blank" rel="noreferrer" >
+								<button class="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
+							</a>
+						</div>
+					</span>
 
 				</div>
 			</div>	

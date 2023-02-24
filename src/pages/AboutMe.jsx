@@ -15,7 +15,8 @@ const AboutMe = () => {
 				</div>
 				<div className="details">
 					<div className="content">
-						<h2>Melissa Stan<span>Full Stack Web Developer</span></h2>
+						<h2>Melissa Stan</h2>
+						<span>Full Stack Web Developer</span>
 						<div className="social-icons">actual content</div>
 					</div>
 				</div>

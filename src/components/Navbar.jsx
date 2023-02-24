@@ -15,7 +15,7 @@ const Navbar = () => {
 		// 	link: "/",
 		// },
 		{
-			title: "About Me",
+			title: "About",
 			name: "aboutMe",
 			link: "/aboutme",
 		},
@@ -57,7 +57,7 @@ const Navbar = () => {
 	return (
 		<nav className="h-16 z-50 bg-stone-100 fixed shadow-md w-full top-0 left-0">
 			<div className=" md:flex items-center px-5 md:grid md:grid-cols-3">
-				<h1 className="text-5xl pb-2">
+				<h1 className="text-5xl p-2">
 					<Link to="/">
 					Melissa
 					</Link>
