@@ -64,7 +64,7 @@ const Navbar = () => {
 				</h1>
 
 				{/* Mobile responsive */}
-				<div onClick={()=>setOpen(!open)} className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
+				<div onClick={()=>setOpen(!open)} className="text-3xl absolute right-8 top-4 cursor-pointer md:hidden">
 					<span name={open ? "close":"menu"}><FiMenu /></span>
 				</div>
 
@@ -85,7 +85,7 @@ const Navbar = () => {
 					<ul className="p-2 flex justify-between md:justify-end md:float-right">
 						{icons.map((icon) => (
 							<Link
-							className="inline-block md:px-1"
+							className="inline-block md:px-1.5"
 							key={icon.name}
 							to={icon.link}
 							target="_blank" 

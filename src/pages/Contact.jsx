@@ -193,7 +193,7 @@ const Contact = () => {
 						<div className="text-2xl" key={myContact.info}>
 							<Link to={myContact.href}>
 								<div className="flex justify-center">
-									<div className="w-10 h-10 bg-red-200 rounded-full relative flex justify-center text-center">
+									<div className="w-10 h-10 bg-slate-800 text-slate-200 rounded-full relative flex justify-center text-center">
 										<h2 className="text-xl grid place-items-center">{myContact.icon}</h2>
 									</div>
 								</div>

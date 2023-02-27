@@ -11,6 +11,11 @@
     font-family: "Raleway", sans-serif;
 }
 
+.hero {
+    height:95vh;
+    width: 100vw;
+}
+
 .aboutme-page{
     box-sizing: border-box;
     display:flex;

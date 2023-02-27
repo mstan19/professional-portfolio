@@ -16,19 +16,15 @@ const images = [snowflake1, snowflake2]
 const Home = () => {
     const backgroundPic={
       backgroundImage: `url(${pic})`,
-      // height:'80vh',
-      // marginTop:'0px',
-      // fontSize:'50px',
       backgroundSize: 'cover',
-      // backgroundRepeat: 'no-repeat',
     };
     
 
     return (
         <div className="flex flex-col justify-center text-center">
           
-          <img className="relative object-cover bg-contain" src={pic} alt="backgroundPic"></img>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 opacity-60">
+          <img className="relative hero object-cover bg-contain" src={pic} alt="backgroundPic"></img>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5 opacity-60 shadow">
             <h1 className="text-5xl font-semibold mb-2">Melissa Stan</h1>
             <p className="text-2xl text-gray-500 font-medium">Full Stack Web Developer</p>
             <button className="mt-10">

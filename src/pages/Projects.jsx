@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import projectOnePic from "../assets/project1pic.png";
 import projectTwoPic from "../assets/project2pic.png";
 import projectThreePic from "../assets/project3pic.png";
+import coziaPic from "../assets/coziaPic.png";
 import gif1 from "../assets/gifs/project1.gif";
 import gif2 from "../assets/gifs/project2.gif";
 import gif3 from "../assets/gifs/project3.gif";
+import coziaGif from "../assets/gifs/cozia.gif";
 import divider from "../assets/divider.png";
 import { TbBrandGithub } from "react-icons/tb";
 import { IoRocketSharp } from "react-icons/io5";
@@ -13,67 +15,38 @@ import { IoRocketSharp } from "react-icons/io5";
 const Projects = () => {
 	const projects = [
 		{
-			title: "MeowWoof",
-			image: projectOnePic,
-			summary: "blah blah blah blah blah blah",
-			technologies: [
-				"Node.js, ",
-				"JQuery UI, ",
-				"TailwindCSS/Bootstrap, ",
-				"sendgrid, ",
-				"Mysql, ",
-				"Sequelize"
-			],
-			github: "https://github.com/mstan19/Project-MeowWoof",
-			gif: gif1,
-			deployLink: "https://sleepy-lake-64431.herokuapp.com/"
+			title: "Cozia",
+			image: coziaPic,
+			summary: "Developed a MERN stack apparel e-commerce application and will be deployed with AWS.",
+			github: "https://github.com/mstan19/cozia",
+			gif: coziaGif,
+			deployLink: "https://youtu.be/yqWX86uT5jM"
 		},
 		{
 			title: "ResuMade",
 			image: projectThreePic,
-			summary: "blah blah blah blah blah blah",
-			technologies: [
-				"MERN stack",
-			],
+			summary: "Directed an e-commerce MERN stack app that implemented the MVC paradigm to produce a formatted resume based on user’s information.",
 			github: "https://github.com/mstan19/ResuMade",
 			gif: gif3,
 			deployLink: "https://resumade.herokuapp.com"
 		},
 		{
+			title: "MeowWoof",
+			image: projectOnePic,
+			summary: "Created a RESTful API that followed a MVC paradigm, which is designed to help keeping track of animals in a pet shelter.",
+			github: "https://github.com/mstan19/Project-MeowWoof",
+			gif: gif1,
+			deployLink: "https://sleepy-lake-64431.herokuapp.com/"
+		},
+		{
 			title: "Turnip Fest",
 			image: projectTwoPic,
-			summary: "blah blah blah blah blah blah",
-			technologies: [
-				"Sever-side API, ",
-				"JQuery UI, ",
-				"TailwindCSS ",
-			],
+			summary: "Built an interactive website that generates a recipe based on the user's special diet preferences and choosing music genres.",
 			github: "https://github.com/mstan19/TurnipFest",
 			gif: gif2,
 			deployLink: "https://yuyitax.github.io/TurnipFest/"
 		},
-		{
-			title: "ResuMade",
-			image: projectThreePic,
-			summary: "blah blah blah blah blah blah",
-			technologies: [
-				"MERN stack",
-			],
-			github: "https://github.com/mstan19/ResuMade",
-			gif: gif1,
-			deployLink: "https://resumade.herokuapp.com"
-		},
-		{
-			title: "ResuMade",
-			image: projectThreePic,
-			summary: "blah blah blah blah blah blah",
-			technologies: [
-				"MERN stack",
-			],
-			github: "https://github.com/mstan19/ResuMade",
-			gif: gif1,
-			deployLink: "https://resumade.herokuapp.com"
-		},
+			
 		
 	]
 
@@ -84,19 +57,19 @@ const Projects = () => {
 	}
 
 	// (project.summary, project.title, project.technologies, project.github, project.deployLink)
-	const textBlock =(textSummary, textTitle, textTech, textGithub, textDeployLink) => {
+	const textBlock =(textSummary, textTitle, textGithub, textDeployLink) => {
 		return <div className="sm:col-span-2 w-full h-52 z-10">
 					<div className="relative px-6 py-3 font-bold text-black group h-full w-full block">
-						<span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-4 -translate-y-4 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+						<span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-4 -translate-y-4 bg-neutral-800 group-hover:translate-x-0 group-hover:translate-y-0"></span>
 						<span className="absolute inset-0 w-full h-full border-4 border-black">
-							<div className="text-center font-lg h-10">{textTitle}</div>
-							<div className="italic text-center">{textSummary}</div>
-							<div className="h-30 w-30 flex justify-center">
-								<Link to={textGithub} className="relative pt-3 mt-12 h-10 w-10 mr-6" target="_blank" rel="noreferrer" >
-									<button className="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><TbBrandGithub /></button>
+							<div className="text-center text-slate-100 font-lg h-10 mt-3">{textTitle}</div>
+							<div className="italic text-slate-100 text-center p-5">{textSummary}</div>
+							<div className="flex justify-center">
+								<Link to={textGithub} className="relative mr-6" target="_blank" rel="noreferrer" >
+									<button className="border-2 border-slate-100 rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><TbBrandGithub /></button>
 								</Link>
-								<Link to={textDeployLink} className="relative pt-3 mt-12 h-10 w-10" target="_blank" rel="noreferrer" >
-									<button className="rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
+								<Link to={textDeployLink} className="relative" target="_blank" rel="noreferrer" >
+									<button className="border-2 border-slate-100  rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
 								</Link>
 							</div>
 						</span>
@@ -109,8 +82,10 @@ const Projects = () => {
 	const renderGif = (selectedOption) => {
 		console.log(selectedOption)
 		// setTitle(selectedOption)
-
 		switch (selectedOption) {
+			case "Cozia":
+				setCurrentGif(coziaGif);
+				return;
 			case "MeowWoof":
 				setCurrentGif(gif1);
 				return;
