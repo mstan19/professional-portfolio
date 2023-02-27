@@ -4,13 +4,18 @@ import projectOnePic from "../assets/project1pic.png";
 import projectTwoPic from "../assets/project2pic.png";
 import projectThreePic from "../assets/project3pic.png";
 import coziaPic from "../assets/coziaPic.png";
+import jatePic from "../assets/jatePic.png";
+import employeeTrackerPic from "../assets/employeeTrackerPic.png";
 import gif1 from "../assets/gifs/project1.gif";
 import gif2 from "../assets/gifs/project2.gif";
 import gif3 from "../assets/gifs/project3.gif";
 import coziaGif from "../assets/gifs/cozia.gif";
+import jateGif from "../assets/gifs/jate.gif";
+import employeeTrackerGif from "../assets/gifs/ET.gif";
 import divider from "../assets/divider.png";
 import { TbBrandGithub } from "react-icons/tb";
 import { IoRocketSharp } from "react-icons/io5";
+import { render } from "react-dom";
 
 const Projects = () => {
 	const projects = [
@@ -41,22 +46,34 @@ const Projects = () => {
 		{
 			title: "Turnip Fest",
 			image: projectTwoPic,
-			summary: "Built an interactive website that generates a recipe based on the user's special diet preferences and choosing music genres.",
+			summary: "Built an interactive website that generates a recipe based on the user's special diet and music genre preferences.",
 			github: "https://github.com/mstan19/TurnipFest",
 			gif: gif2,
 			deployLink: "https://yuyitax.github.io/TurnipFest/"
 		},
-			
-		
+		{
+			title: "Jate",
+			image: jatePic,
+			summary: "Engineered a Progress Web Application text editor application that runs in the browser and offline.",
+			github: "https://github.com/mstan19/text-editor-ms",
+			gif: jateGif,
+			deployLink: "https://jate-text-editor-ms.herokuapp.com"
+		},
+		{
+			title: "Employee Tracker",
+			image: employeeTrackerPic,
+			summary: "Consolidated a company's employee database, where users can view and interact with information stored in MySQL database.",
+			github: "https://github.com/mstan19/employee-tracker-ms",
+			gif: employeeTrackerGif,
+		},	
 	]
 
 	const imageBlock = (imageSrc) => {
-		return	<div className="w-full h-52  z-20">
+		return	<div className="w-full h-52 shadow-xl z-20">
 					<img className="object-cover h-full w-full" src={imageSrc} alt="projectsImage" />
 				</div>
 	}
 
-	// (project.summary, project.title, project.technologies, project.github, project.deployLink)
 	const textBlock =(textSummary, textTitle, textGithub, textDeployLink) => {
 		return <div className="sm:col-span-2 w-full h-52 z-10">
 					<div className="relative px-6 py-3 font-bold text-black group h-full w-full block">
@@ -68,9 +85,12 @@ const Projects = () => {
 								<Link to={textGithub} className="relative mr-6" target="_blank" rel="noreferrer" >
 									<button className="border-2 border-slate-100 rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><TbBrandGithub /></button>
 								</Link>
-								<Link to={textDeployLink} className="relative" target="_blank" rel="noreferrer" >
-									<button className="border-2 border-slate-100  rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
-								</Link>
+								{ textTitle === "Employee Tracker" ? "" :
+									<Link to={textDeployLink} className="relative" target="_blank" rel="noreferrer" >
+										<button className="border-2 border-slate-100  rounded-full bg-neutral-900 py-2 px-3.5 text-white shadow shadow-black/60"><IoRocketSharp /></button>
+									</Link>
+								}
+								
 							</div>
 						</span>
 					</div>
@@ -78,9 +98,12 @@ const Projects = () => {
 	} 	
 	
 	const [currentGif, setCurrentGif] = useState(gif1);
+	const [currentTitle, setCurrentTitle] = useState();
 
 	const renderGif = (selectedOption) => {
 		console.log(selectedOption)
+		setCurrentTitle(selectedOption)
+		// console.log(currentTitle)
 		// setTitle(selectedOption)
 		switch (selectedOption) {
 			case "Cozia":
@@ -91,11 +114,16 @@ const Projects = () => {
 				return;
 			case "ResuMade":
 				setCurrentGif(gif3);
+				return; 
+			case "Jate": 
+				setCurrentGif(jateGif); 
+				return;
+			case "Employee Tracker":
+				setCurrentGif(employeeTrackerGif);
 				return;
 			case "Turnip Fest":
-				setCurrentGif(gif2);
-				return;
-			
+					setCurrentGif(gif2);
+					return;
 			default:
 				setCurrentGif(gif1);
 				return;
@@ -124,7 +152,7 @@ const Projects = () => {
 
 			{/* Gif */}
 				<div className="hidden xl:block xl:fixed top-20 right-0 h-full w-[50%]">
-					<img className="object-cover h-full w-full" src={currentGif} alt="gif"/>
+					<img className={`h-full w-full ${currentTitle === "Jate" || currentTitle === "Employee Tracker"? "object-left-top object-cover" : "object-cover" }`} src={currentGif} alt="gif"/>
 				</div>
 				<div className="hidden xl:block xl:fixed top-20 right-0 h-full w-[50%] bg-black opacity-40"></div>
 			</div>

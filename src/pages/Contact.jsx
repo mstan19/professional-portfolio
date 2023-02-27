@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { ImPhone } from "react-icons/im";
 import { TfiEmail } from "react-icons/tfi";
-import { GrMapLocation } from "react-icons/gr";
+import { GoLocation } from "react-icons/go";
 import emailjs from '@emailjs/browser';
 import Reaptcha from 'reaptcha';
 import { useReward } from 'react-rewards';
@@ -50,7 +50,7 @@ const Contact = () => {
 			category: "location",
 			title: "Location:",
 			href: "#",
-			icon: <GrMapLocation />,
+			icon: <GoLocation />,
 		},
 	]
 
@@ -190,15 +190,14 @@ const Contact = () => {
 				
 				<div className="grid grid-cols-1 md:grid-cols-3 mt-16 mb-28 md:mb-0 pb-20">
 					{myContactInfomations.map((myContact) => (
-						<div className="text-2xl" key={myContact.info}>
+						<div className="text-2xl m-5 sm:m-0" key={myContact.info}>
 							<Link to={myContact.href}>
 								<div className="flex justify-center">
-									<div className="w-10 h-10 bg-slate-800 text-slate-200 rounded-full relative flex justify-center text-center">
+									<div className="w-10 h-10 bg-slate-800 text-slate-200 rounded-full relative flex justify-center text-center mb-5 sm:m-0">
 										<h2 className="text-xl grid place-items-center">{myContact.icon}</h2>
 									</div>
 								</div>
 								<div>
-									{/* <div className="flex justify-center">{myContact.title}</div> */}
 									<div className="flex justify-center">{myContact.info}</div>
 								</div>
 							</Link>
