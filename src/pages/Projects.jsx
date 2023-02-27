@@ -62,7 +62,7 @@ const Projects = () => {
 		{
 			title: "Employee Tracker",
 			image: employeeTrackerPic,
-			summary: "Consolidated a company's employee database, where users can view and interact with information stored in MySQL database.",
+			summary: "Designed a company's employee database, where users can view and interact with the MySQL database.",
 			github: "https://github.com/mstan19/employee-tracker-ms",
 			gif: employeeTrackerGif,
 		},

@@ -114,7 +114,7 @@ const Contact = () => {
 						) : null}
 
 					</div>
-					<div className="mb-4 md:w-1/2 w-full">
+					<div className="mb-5 md:w-1/2 w-full">
 						<label
 							className="block text-black-700 text-lg mb-2"
 							htmlFor="email"
@@ -188,7 +188,7 @@ const Contact = () => {
 					</button>
 				</form>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 mt-16 mb-28 md:mb-0 pb-20">
+				<div className="grid grid-cols-1 md:grid-cols-3 mt-16 mb-28 md:mb-0 pb-28">
 					{myContactInfomations.map((myContact) => (
 						<div className="text-2xl m-5 sm:m-0" key={myContact.info}>
 							<Link to={myContact.href}>

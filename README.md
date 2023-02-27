@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# My Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+-   [Description](#description)
+-   [Deployed Application](#deployed-application)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Tests](#tests)
+-   [Credits](#credits)
+-   [Questions](#questions)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Hi, my name is Melissa, and welcome to my Portfolio!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Brief synopsis about me: I am an ambitious Full Stack Web Developer with an extensive background in psychology and basic medical knowledge who has experience building multiple full-stack applications. I enjoy coding web-based applications and has hands-on experience with front-end and back-end. Looking for a fast-paced environment with the goal to become Lead Dev.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What makes my portfolio stand out?
 
-### `npm test`
+To keep up with lastest front-end softwares, my portfolio uses the latest React, which is one of the most popular front-end softwares. Not only is my portfolio mobile responsive, but also it is deployed by AWS.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
 
-### `npm run build`
+##### Languages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   HTML5
+-   CSS3
+-   JavaScript (ES6)
+-   MySQL
+-   NoSQL
+-   GraphQL
+-   jQuery
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##### Frameworks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   CSS Frameworks (i.e., Bootstrap CSS, TailWind CSS, & Ant Design)
+-   Express
+-   Sequelize
+-   Express
+-   MongoDB and Mongoose
+-   Apollo
+-   React
+-   Node.js
 
-### `npm run eject`
+##### Core Concepts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   APIs (client, third-party, and server-side)
+-   Agile Methodology
+-   Github
+-   Mobile First Design
+-   Deployment (AWS, Heroku)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### Repository and Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   Github repository
+-   AWS deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployed Application
 
-## Learn More
+AWS Deployment: []
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Github Repository: [https://github.com/mstan19/professional-portfolio]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation
 
-### Code Splitting
+```
+clone github repo
+npm install
+npm run start
+Go to http://localhost:3001
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+OR follow the above AWS deployed application link
 
-### Analyzing the Bundle Size
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Screenshots
 
-### Making a Progressive Web App
+???????????
+Homepage
+![Homepage](./client/src/assets/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+About
+![About](./client/src/assets/)
 
-### Advanced Configuration
+Projects
+![Projects](./client/src/assets/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Resume
+![Resume](./client/src/assets/)
 
-### Deployment
+Contact
+![Contact](./client/src/assets/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contact
 
-### `npm run build` fails to minify
+## Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+No tests are applicable to this project at this time.
+
+## Credits
+
+This portfolio would not have looked this great without EzGif for video editing and Unsplash for the images!
+
+## Questions
+
+Any questions? I'd love to hear from you!
+Contact me through my github.
+
+---
