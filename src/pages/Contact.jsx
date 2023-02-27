@@ -16,8 +16,8 @@ import divider from "../assets/divider.png";
 
 const Contact = () => {
 	const form = useRef();
-	const {register, formState: {errors}, handleSubmit} = useForm();
-	const [buttonMessage, setButtonMessage]= useState(false);
+	const { register, formState: { errors }, handleSubmit } = useForm();
+	const [buttonMessage, setButtonMessage] = useState(false);
 	const [captchaVerified, setCaptchaVerified] = useState(false);
 	const [emailSuccess, setEmailSuccess] = useState(false);
 	const { reward, isAnimating } = useReward("rewardId", "confetti");
@@ -29,7 +29,7 @@ const Contact = () => {
 	const textChange = () => {
 		setButtonMessage(!buttonMessage)
 	}
-	
+
 	const myContactInfomations = [
 		{
 			info: "melissastan91@gmail.com",
@@ -54,14 +54,14 @@ const Contact = () => {
 		},
 	]
 
-	useEffect (() => {
+	useEffect(() => {
 		if (emailSuccess) {
 			reward()
 		}
-	  }, [emailSuccess])
+	}, [emailSuccess])
 
 	console.log("errors", errors)
-	
+
 
 	const sendEmail = async (data) => {
 		console.log(data)
@@ -73,23 +73,23 @@ const Contact = () => {
 		// }, (error) => {
 		// 	console.log(error.text);
 		// });
-		
+
 		setEmailSuccess(true);
 		console.log("at the end")
 	};
-	
+
 
 	return (
 		<div className="bg-red-50 min-h-full">
 			<h1 className="text-4xl font-normal text-center pt-4">Let's Work Together!</h1>
-			<img className="mx-auto" src={divider} alt="divider"/>
+			<img className="mx-auto" src={divider} alt="divider" />
 			<p className=" italic m-6 text-center">Interested in working together? Message me using this form below. Speak to you soon!</p>
 			<div className="container mx-auto">
-				<form 
-				ref={form} 
-				onSubmit={handleSubmit(sendEmail)} 
+				<form
+					ref={form}
+					onSubmit={handleSubmit(sendEmail)}
 
-				className="flex flex-col items-center bg-red-50 p-0 m-2 md:m-0">
+					className="flex flex-col items-center bg-red-50 p-0 m-2 md:m-0">
 					<div className="mb-4 md:w-1/2 w-full">
 						<label
 							className="block text-black-700 text-lg mb-2"
@@ -98,7 +98,7 @@ const Contact = () => {
 							Full Name
 						</label>
 						<input
-							{...register("user_name",{
+							{...register("user_name", {
 								required: "Name is required.",
 								minLength: {
 									value: 3,
@@ -112,7 +112,7 @@ const Contact = () => {
 						{errors && errors.user_name?.message ? (
 							<p className="text-red-700 bg-red-100 text-base border-solid border border-red-700 text-center p-7 m-2">{errors.user_name?.message}</p>
 						) : null}
-						
+
 					</div>
 					<div className="mb-4 md:w-1/2 w-full">
 						<label
@@ -122,22 +122,22 @@ const Contact = () => {
 							Email Address
 						</label>
 						<input
-						{...register("user_email",{
-							required: "Your email is required.",
-							pattern: {
-								value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-								message: "Email must be valid."
-							},
-						})}
+							{...register("user_email", {
+								required: "Your email is required.",
+								pattern: {
+									value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+									message: "Email must be valid."
+								},
+							})}
 							className="appearance-none border border-black w-full py-2 px-3 text-black-700 leading-tight rounded-lg"
 							name="user_email"
 							type="text"
 						></input>
-						
+
 						{errors && errors.user_email?.message ? (
 							<p className="text-red-700 bg-red-100 text-base border-solid border border-red-700 text-center p-7 m-2">{errors.user_email?.message}</p>
 						) : null}
-					
+
 					</div>
 
 					<div className="mb-6 md:w-1/2 w-full">
@@ -147,47 +147,47 @@ const Contact = () => {
 						>
 							Message
 						</label>
-						<textarea 
-						{...register("message",{
-							required: "Message is required.",
-							minLength: {
-								value: 15,
-								message: "Your message must be at least be 15 characters long."
-							},
-						})}
-						{...register("message")}
-							rows="5" 
-							className="block appearance-none border border-black w-full p-2.5 px-3 text-black-700 leading-tight rounded-lg" 
-							name="message" 
-							id="message" 
-							type="text" 
+						<textarea
+							{...register("message", {
+								required: "Message is required.",
+								minLength: {
+									value: 15,
+									message: "Your message must be at least be 15 characters long."
+								},
+							})}
+							{...register("message")}
+							rows="5"
+							className="block appearance-none border border-black w-full p-2.5 px-3 text-black-700 leading-tight rounded-lg"
+							name="message"
+							id="message"
+							type="text"
 						>
 						</textarea>
-						
+
 						{errors && errors.message?.message ? (
 							<p className="text-red-700 bg-red-100 text-base border-solid border border-red-700 text-center p-7 m-2">{errors.message?.message}</p>
 						) : null}
-					
+
 					</div>
 
-					<Reaptcha 
-						sitekey="6LcDxpwkAAAAAMYeHaSLMfrnTZbz1mZXAnka-o1B" 
-						onVerify={onVerify} 
+					<Reaptcha
+						sitekey="6LcDxpwkAAAAAMYeHaSLMfrnTZbz1mZXAnka-o1B"
+						onVerify={onVerify}
 					/>
-					 
+
 					<button
 						className={`w-1/3 relative px-6 py-3 font-bold text-black group mt-7`}
 						type="submit"
 						value="Send"
 						disabled={!captchaVerified || isAnimating}
 					>
-							<span className={`absolute inset-0 w-full h-11 transition duration-300 ease-out transform -translate-x-2 -translate-y-2 ${emailSuccess ? "bg-emerald-500 hover:bg-emerald-400" : "bg-red-300 hover:bg-red-400"} group-hover:translate-x-0 group-hover:translate-y-0`} ></span>
-							<span  className="absolute inset-0 w-full  border-4 border-black h-11"></span>
-							<span id="rewardId" className="relative">{emailSuccess ? "SUCCESSFULLY SENT!" : "SUBMIT"}</span>
-						
+						<span className={`absolute inset-0 w-full h-11 transition duration-300 ease-out transform -translate-x-2 -translate-y-2 ${emailSuccess ? "bg-emerald-500 hover:bg-emerald-400" : "bg-red-300 hover:bg-red-400"} group-hover:translate-x-0 group-hover:translate-y-0`} ></span>
+						<span className="absolute inset-0 w-full  border-4 border-black h-11"></span>
+						<span id="rewardId" className="relative">{emailSuccess ? "SUCCESSFULLY SENT!" : "SUBMIT"}</span>
+
 					</button>
 				</form>
-				
+
 				<div className="grid grid-cols-1 md:grid-cols-3 mt-16 mb-28 md:mb-0 pb-20">
 					{myContactInfomations.map((myContact) => (
 						<div className="text-2xl m-5 sm:m-0" key={myContact.info}>
@@ -202,12 +202,12 @@ const Contact = () => {
 								</div>
 							</Link>
 						</div>
-						
+
 					))}
 				</div>
 			</div>
 		</div>
-		
+
 
 	);
 };

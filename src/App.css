@@ -5,124 +5,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Raleway", sans-serif;
 }
 
 .hero {
-    height:95vh;
-    width: 100vw;
+	height: 95vh;
+	width: 100vw;
 }
 
-.aboutme-page{
-    box-sizing: border-box;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70%;
+.aboutme-page {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 70%;
 }
 
 .card {
-    position: relative;
-    width:300px;
-    height: 400px;
-    background: white;
-    transform-style: preserve-3d;
-    transform:perspective(1000px);
-    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
-    transition: 1s;
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: white;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+	transition: 1s;
 }
 
- .card .details{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card .details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 }
 
-.card .details .content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: center;
-    transition: 0.2s;
+.card .details .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: center;
+	transition: 0.2s;
 }
 
-.card .details .content h2{
-    text-align: center;
-    font-weight: 700;
-    line-height: 1em;
+.card .details .content h2 {
+	text-align: center;
+	font-weight: 700;
+	line-height: 1em;
 }
 
-.card .imgBox{
-    position: relative;
-    width:100%;
-    height: 100%;
-    z-index: 1;
-    transform-origin: left;
-    transform-style: preserve-3d;
-    background: black;
-    transition: 1s;
-}
-.card:hover{
-    transform: translateX(50%);
+.card .imgBox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	background: black;
+	transition: 1s;
 }
 
-.card:hover .imgBox{
-    transform: rotateY(-180deg);
+.card:hover {
+	transform: translateX(50%);
 }
 
-.card .imgBox img:nth-child(2){
-    transform: rotateY(180deg);
+.card:hover .imgBox {
+	transform: rotateY(-180deg);
+}
+
+.card .imgBox img:nth-child(2) {
+	transform: rotateY(180deg);
 }
 
 .card .imgBox img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-} 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
 
 
 .page-container {
-    display: flex;
-    flex-direction: column;
-    /* height: 100rem; */
+	display: flex;
+	flex-direction: column;
+	/* height: 100rem; */
 }
 
 .activeBtn {
-    opacity: 1 !important;
+	opacity: 1 !important;
 }
+
 /* .home {
     height: 95%;
 } */
 
 .nav-link-btn {
-    opacity:0.5;
+	opacity: 0.5;
 }
 
 #petal {
-    display: inline-block;
-    width: 0; height: 0;
-    padding: 20px 9px;
-    background: rgba(0,0,100,.4);
-    transform: rotate(72deg);
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    background: rgba(245, 30, 188, 0.4);
-    position:absolute;
-  }
-
-
+	display: inline-block;
+	width: 0;
+	height: 0;
+	padding: 20px 9px;
+	background: rgba(0, 0, 100, .4);
+	transform: rotate(72deg);
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	background: rgba(245, 30, 188, 0.4);
+	position: absolute;
+}

@@ -12,7 +12,7 @@ const AboutMe = () => {
 		<div className="bg-red-50 h-full">
 
 			<h1 className="text-4xl font-normal text-center pt-4">About Me</h1>
-			<img className="mx-auto mb-10" src={divider} alt="divider"/>			
+			<img className="mx-auto mb-10" src={divider} alt="divider" />
 			<div className="aboutme-page pb-20">
 				<div className="card">
 					<div className="imgBox">
