@@ -80,7 +80,7 @@ const Contact = () => {
 	
 
 	return (
-		<div className="bg-red-50 h-full">
+		<div className="bg-red-50 min-h-full">
 			<h1 className="text-4xl font-normal text-center pt-4">Let's Work Together!</h1>
 			<img className="mx-auto" src={divider} alt="divider"/>
 			<p className=" italic m-6 text-center">Interested in working together? Message me using this form below. Speak to you soon!</p>
