@@ -78,7 +78,7 @@ Homepage
 ![Homepage](./client/src/assets/homePortfolio.png)
 
 About
-![About](./client/src/assets/)
+![About](./client/src/assets/aboutPortfolio.png)
 
 Projects
 ![Projects](./client/src/assets/projectsPortfolio.png)

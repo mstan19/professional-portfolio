@@ -68,13 +68,13 @@ const Projects = () => {
 	]
 
 	const imageBlock = (imageSrc) => {
-		return <div className="w-full h-52 shadow-xl z-20">
+		return <div className="w-full h-60 shadow-xl z-20">
 			<img className="object-cover h-full w-full" src={imageSrc} alt="projectsImage" />
 		</div>
 	}
 
 	const textBlock = (textSummary, textTitle, textGithub, textDeployLink) => {
-		return <div className="sm:col-span-2 w-full h-52 z-10">
+		return <div className="sm:col-span-2 w-full h-60 z-10">
 			<div className="relative px-6 py-3 font-bold text-black group h-full w-full block">
 				<span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-4 -translate-y-4 bg-neutral-800 group-hover:translate-x-0 group-hover:translate-y-0"></span>
 				<span className="absolute inset-0 w-full h-full border-4 border-black">
@@ -133,10 +133,10 @@ const Projects = () => {
 
 			{/* Container */}
 			<div className="mx-8">
-				<div className="xl:w-[50%] w-[100%] h-20 text-center p-5 pt-4 mb-36">
+				<div className="2xl:w-[50%] w-[100%] h-10 2xl:h-20 text-center pt-4 mb-36">
 					<h1 className="text-4xl">Projects</h1>
 					<img className="mx-auto" src={divider} alt="divider" />
-					<div className="text-xl ">Click on the project to get a sneek preview!</div>
+					<div className="text-xl hidden 2xl:block">Click on the project to get a sneek preview!</div>
 				</div>
 
 				{/* Projects */}

@@ -28,8 +28,8 @@ const Resume = () => {
 				{/* Download Resume */}
 				<section className="bg-neutral-800 h-52 md:h-56 cursor-pointer flex justify-center">
 					<Link to={pdf} download="Melissa Stan Resume" target="_blank" rel="noreferrer" >
-						<div className="text-white text-3xl flex justify-center pt-20"><TfiDownload /></div>
-						<div className="text-white text-3xl flex justify-center pt-10">Download My Resumé</div>
+						<div className="text-white text-3xl flex justify-center pt-12"><TfiDownload /></div>
+						<div className="text-white text-3xl flex justify-center pt-10">Download Resumé</div>
 						<span className="relative text-white"></span>
 					</Link>
 
@@ -46,7 +46,7 @@ const Resume = () => {
 						<p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 pb-5">MeowWoof: Created a RESTful API that followed a MVC paradigm, which is designed to help keeping track of animals in a pet shelter.</p>
 						<p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 pb-">TurnipFest: Built an interactive website that generates a recipe based on the user's special diet preferences and choosing music genres.</p>
 
-						<button className="rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"><Link to="/projects"></Link>See More</button>
+						<button className="border-2 border-slate-100 rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"><Link to="/projects"></Link>See More</button>
 					</div>
 				</section>
 
@@ -71,7 +71,7 @@ const Resume = () => {
 						<p className="mb-2 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">BS in Psychology and Minor in Biological Science degree with research distinction: Georgia State University</p>
 
 						<div className="flex inline">
-							<button className="flex inline rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"><Link to={bootcampCertificate} download="Melissa Stan Certificate" target="_blank" rel="noreferrer">Certificate</Link></button>
+							<button className="flex inline border-2 border-slate-100 rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"><Link to={bootcampCertificate} download="Melissa Stan Certificate" target="_blank" rel="noreferrer">Certificate</Link></button>
 						</div>
 
 					</div>

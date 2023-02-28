@@ -47,11 +47,11 @@ const Navbar = () => {
 			link: "https://www.linkedin.com/in/melissa-stan-a67008240",
 			icon: <CiLinkedin />,
 		},
-		{
-			name: "stackoverflow",
-			link: "https://stackoverflow.com/users/19202356/melissa-s",
-			icon: <BsStackOverflow />,
-		},
+		// {
+		// 	name: "stackoverflow",
+		// 	link: "https://stackoverflow.com/users/19202356/melissa-s",
+		// 	icon: <BsStackOverflow />,
+		// },
 	];
 
 	return (
