@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BsGithub, BsStackOverflow } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { CiLinkedin } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
+import { AiOutlineInstagram } from "react-icons/ai";
 
 
 const Navbar = () => {
 	let [open, setOpen] = useState(true);
 
 	const pages = [
-		// {
-		// 	title: "Home",
-		// 	name: "home",
-		// 	link: "/",
-		// },
 		{
 			title: "About",
 			name: "aboutMe",
@@ -47,11 +43,11 @@ const Navbar = () => {
 			link: "https://www.linkedin.com/in/melissa-stan-a67008240",
 			icon: <CiLinkedin />,
 		},
-		// {
-		// 	name: "stackoverflow",
-		// 	link: "https://stackoverflow.com/users/19202356/melissa-s",
-		// 	icon: <BsStackOverflow />,
-		// },
+		{
+			name: "instagram",
+			link: "https://instagram.com/misuka_19?igshid=MjkzY2Y1YTY=",
+			icon: <AiOutlineInstagram />,
+		},
 	];
 
 	return (
