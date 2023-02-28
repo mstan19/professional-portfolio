@@ -8,7 +8,7 @@ import experiencePic from "./../assets/experiencePic.jpg";
 import { TfiDownload } from "react-icons/tfi";
 import pdf from "./../assets/resume.pdf";
 import bootcampCertificate from "./../assets/bootcampCertificate.pdf";
-import skillsPic from "./../assets/skillsPic.jpg";
+import skillsPic from "./../assets/typewriterPic.jpg";
 
 
 
@@ -27,7 +27,7 @@ const Resume = () => {
 			<main className="grid grid-cols-1 gap-4 md:grid-cols-3 container mx-auto">
 				{/* Download Resume */}
 				<section className="bg-neutral-800 h-52 md:h-56 cursor-pointer flex justify-center">
-					<Link to={pdf} download="myFile" target="_blank" rel="noreferrer" >
+					<Link to={pdf} download="Melissa Stan Resume" target="_blank" rel="noreferrer" >
 						<div className="text-white text-3xl flex justify-center pt-20"><TfiDownload /></div>
 						<div className="text-white text-3xl flex justify-center pt-10">Download My Resumé</div>
 						<span className="relative text-white"></span>
@@ -71,7 +71,7 @@ const Resume = () => {
 						<p className="mb-2 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">BS in Psychology and Minor in Biological Science degree with research distinction: Georgia State University</p>
 
 						<div className="flex inline">
-							<button className="flex inline rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"><Link to={bootcampCertificate} download="myFile" target="_blank" rel="noreferrer">Certificate</Link></button>
+							<button className="flex inline rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"><Link to={bootcampCertificate} download="Melissa Stan Certificate" target="_blank" rel="noreferrer">Certificate</Link></button>
 						</div>
 
 					</div>

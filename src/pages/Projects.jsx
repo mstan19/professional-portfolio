@@ -15,7 +15,6 @@ import employeeTrackerGif from "../assets/gifs/ET.gif";
 import divider from "../assets/divider.png";
 import { TbBrandGithub } from "react-icons/tb";
 import { IoRocketSharp } from "react-icons/io5";
-import { render } from "react-dom";
 
 const Projects = () => {
 	const projects = [
@@ -103,8 +102,7 @@ const Projects = () => {
 	const renderGif = (selectedOption) => {
 		console.log(selectedOption)
 		setCurrentTitle(selectedOption)
-		// console.log(currentTitle)
-		// setTitle(selectedOption)
+	
 		switch (selectedOption) {
 			case "Cozia":
 				setCurrentGif(coziaGif);
@@ -135,26 +133,27 @@ const Projects = () => {
 
 			{/* Container */}
 			<div className="mx-8">
-				<div className="xl:w-[50%] w-[100%] h-14 text-center pt-4 mb-36">
+				<div className="xl:w-[50%] w-[100%] h-20 text-center p-5 pt-4 mb-36">
 					<h1 className="text-4xl">Projects</h1>
 					<img className="mx-auto" src={divider} alt="divider" />
+					<div className="text-xl ">Click on the project to get a sneek preview!</div>
 				</div>
 
 				{/* Projects */}
 				{projects.map((project, index) => (
-					<div className={`grid grid-rows-1 cursor-pointer mb-16 xl:h-[40%] xl:w-[60%] ${index % 2 === 0 ? "" : "sm:ml-16"}`} key={index}>
+					<div className={`grid grid-rows-1 cursor-pointer mb-16 2xl:h-[40%] 2xl:w-[60%] ${index % 2 === 0 ? "" : "sm:ml-16"}`} key={index}>
 						<div className={`w-full grid grid-cols-1 sm:grid-cols-3 `} onClick={() => renderGif(project.title)}>
 							{index % 2 === 0 ? imageBlock(project.image) : textBlock(project.summary, project.title, project.technologies, project.github, project.deployLink)}
-							{index % 2 === 0 ? textBlock(project.summary, project.title, project.technologies, project.github, project.deployLink) : imageBlock(project.image)}
+							{index % 2 === 0 ? textBlock(project.summary, project.title, project.github, project.deployLink) : imageBlock(project.image)}
 						</div>
 					</div>
 				))}
 
 				{/* Gif */}
-				<div className="hidden xl:block xl:fixed top-20 right-0 h-full w-[50%]">
+				<div className="hidden 2xl:block 2xl:fixed top-20 right-0 h-full w-[50%]">
 					<img className={`h-full w-full ${currentTitle === "Jate" || currentTitle === "Employee Tracker" ? "object-left-top object-cover" : "object-cover"}`} src={currentGif} alt="gif" />
 				</div>
-				<div className="hidden xl:block xl:fixed top-20 right-0 h-full w-[50%] bg-black opacity-40"></div>
+				<div className="hidden 2xl:block 2xl:fixed top-20 right-0 h-full w-[50%] bg-black opacity-40"></div>
 			</div>
 		</div>
 	);

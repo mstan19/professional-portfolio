@@ -65,14 +65,14 @@ const Contact = () => {
 
 	const sendEmail = async (data) => {
 		console.log(data)
-		// emailjs.sendForm('service_9d0xx8q', 'template_1908rlg', form.current, '3j4PV5samtA2z-FeV')
-		// .then((result) => {
-		// 	console.log(result.text);
-		// 	console.log("Message was sent!");
-		// 	setEmailSuccess(true);
-		// }, (error) => {
-		// 	console.log(error.text);
-		// });
+		emailjs.sendForm('service_9d0xx8q', 'template_1908rlg', form.current, '3j4PV5samtA2z-FeV')
+		.then((result) => {
+			console.log(result.text);
+			console.log("Message was sent!");
+			setEmailSuccess(true);
+		}, (error) => {
+			console.log(error.text);
+		});
 
 		setEmailSuccess(true);
 		console.log("at the end")

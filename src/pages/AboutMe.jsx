@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import profilePic from "./../assets/profilepic.JPG";
+import React from "react";
+import profilePic from "./../assets/profilePic.JPG";
 import gradPic from "./../assets/gradpic.jpg";
 import divider from "../assets/divider.png";
-import pic from "./../assets/cherrybloosom.jpeg";
 
 
 const AboutMe = () => {
@@ -16,8 +14,8 @@ const AboutMe = () => {
 			<div className="aboutme-page pb-20">
 				<div className="card">
 					<div className="imgBox">
-						<img className="" src={profilePic} alt="profilePic"></img>
 						<img className="" src={gradPic} alt="profilePic"></img>
+						<img className="" src={profilePic} alt="profilePic"></img>
 					</div>
 					<div className="details">
 						<div className="content flex inline">

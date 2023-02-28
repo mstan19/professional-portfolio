@@ -59,7 +59,7 @@ const Navbar = () => {
 			<div className=" md:flex items-center px-5 md:grid md:grid-cols-3">
 				<h1 className="text-4xl p-2">
 					<Link to="/">
-						Melissa
+						Melissa Stan
 					</Link>
 				</h1>
 
