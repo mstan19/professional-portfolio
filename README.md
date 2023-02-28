@@ -68,32 +68,31 @@ Github Repository: [https://github.com/mstan19/professional-portfolio]
 clone github repo
 npm install
 npm run start
-Go to http://localhost:3001
 ```
-
-OR follow the above AWS deployed application link
 
 ## Usage
 
 ### Screenshots
 
-???????????
 Homepage
-![Homepage](./client/src/assets/)
+![Homepage](./client/src/assets/homePortfolio.png)
 
 About
 ![About](./client/src/assets/)
 
 Projects
-![Projects](./client/src/assets/)
+![Projects](./client/src/assets/projectsPortfolio.png)
 
 Resume
-![Resume](./client/src/assets/)
+![Resume](./client/src/assets/resumePortfolio.png)
 
 Contact
-![Contact](./client/src/assets/)
+![Contact](./client/src/assets/contactPortfolio.png)
 
 ## Contact
+
+-   Github: [https://github.com/mstan19]
+-   Linkedin: [linkedin.com/in/melissa-stan-a67008240/]
 
 ## Tests
 
@@ -106,6 +105,6 @@ This portfolio would not have looked this great without EzGif for video editing 
 ## Questions
 
 Any questions? I'd love to hear from you!
-Contact me through my github.
+Contact me through my github or my Linkedin.
 
 ---
