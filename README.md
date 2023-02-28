@@ -75,7 +75,7 @@ npm run start
 ### Screenshots
 
 Homepage
-![Homepage](./client/src/assets/homePortfolio.png)
+![Homepage](./src/assets/homePortfolio.png)
 
 About
 ![About](./client/src/assets/aboutPortfolio.png)
