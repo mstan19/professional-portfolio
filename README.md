@@ -78,16 +78,16 @@ Homepage
 ![Homepage](./src/assets/homePortfolio.png)
 
 About
-![About](./client/src/assets/aboutPortfolio.png)
+![About](./src/assets/aboutPortfolio.png)
 
 Projects
-![Projects](./client/src/assets/projectsPortfolio.png)
+![Projects](./src/assets/projectsPortfolio.png)
 
 Resume
-![Resume](./client/src/assets/resumePortfolio.png)
+![Resume](./src/assets/resumePortfolio.png)
 
 Contact
-![Contact](./client/src/assets/contactPortfolio.png)
+![Contact](./src/assets/contactPortfolio.png)
 
 ## Contact
 
