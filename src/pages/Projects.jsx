@@ -143,8 +143,8 @@ const Projects = () => {
 				{projects.map((project, index) => (
 					<div className={`grid grid-rows-1 cursor-pointer mb-16 2xl:h-[40%] 2xl:w-[60%] ${index % 2 === 0 ? "" : "sm:ml-16"}`} key={index}>
 						<div className={`w-full grid grid-cols-1 sm:grid-cols-3 `} onClick={() => renderGif(project.title)}>
-							{index % 2 === 0 ? imageBlock(project.image) : textBlock(project.summary, project.title, project.technologies, project.github, project.deployLink)}
-							{index % 2 === 0 ? textBlock(project.summary, project.title, project.github, project.deployLink) : imageBlock(project.image)}
+							{index % 2 === 0 ? imageBlock(project.image) : textBlock(project.summary, project.title,  project.github, project.deployLink)}
+							{index % 2 === 0 ? textBlock(project.summary,project.title, project.github, project.deployLink) : imageBlock(project.image)}
 						</div>
 					</div>
 				))}
