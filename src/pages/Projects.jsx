@@ -24,7 +24,7 @@ const Projects = () => {
 			summary: "Developed a MERN stack apparel e-commerce application and will be deployed with AWS.",
 			github: "https://github.com/mstan19/cozia",
 			gif: coziaGif,
-			deployLink: "https://youtu.be/yqWX86uT5jM"
+			deployLink: "https://cozia.herokuapp.com/"
 		},
 		{
 			title: "ResuMade",
