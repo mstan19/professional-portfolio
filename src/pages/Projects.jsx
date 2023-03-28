@@ -40,7 +40,7 @@ const Projects = () => {
 			summary: "Created a RESTful API that followed a MVC paradigm, which is designed to help keeping track of animals in a pet shelter.",
 			github: "https://github.com/mstan19/Project-MeowWoof",
 			gif: gif1,
-			deployLink: "https://sleepy-lake-64431.herokuapp.com/"
+			deployLink: "https://meowwoof.herokuapp.com/"
 		},
 		{
 			title: "Turnip Fest",
