@@ -56,13 +56,18 @@ const AboutMe = () => {
 					
 					<div className="mt-10">Here are a few technologies I have been working with recently:</div>
 					<ul className="grid grid-cols-1 md:grid-cols-2 list-disc list-inside m-5">
-						<li>React</li>
-						<li>AWS</li>
-						<li>Node.js</li>
-						<li>MySQL</li>
 						<li>Apollo</li>
+						<li>AWS</li>
+						<li>Express</li>
 						<li>GraphQL</li>
+						<li>Heroku</li>
+						<li>Java</li>
+						<li>JavaScript (ES6)</li>
+						<li>jQuery</li>
+						<li>MySQL</li>
+						<li>Node.js</li>
 						<li>NoSQL</li>
+						<li>React</li>
 						<li>RESTful APIs</li>
 					</ul>
 				</div>

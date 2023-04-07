@@ -24,7 +24,7 @@ const Projects = () => {
 			summary: "Developed a MERN stack apparel e-commerce application and will be deployed with AWS.",
 			github: "https://github.com/mstan19/cozia",
 			gif: coziaGif,
-			deployLink: "https://cozia.herokuapp.com/"
+			deployLink: "https://gocozia.com/"
 		},
 		{
 			title: "ResuMade",
@@ -40,7 +40,7 @@ const Projects = () => {
 			summary: "Created a RESTful API that followed a MVC paradigm, which is designed to help keeping track of animals in a pet shelter.",
 			github: "https://github.com/mstan19/Project-MeowWoof",
 			gif: gif1,
-			deployLink: "https://sleepy-lake-64431.herokuapp.com/"
+			deployLink: "https://meowwoof.herokuapp.com/"
 		},
 		{
 			title: "Turnip Fest",
