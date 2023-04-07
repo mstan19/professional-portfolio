@@ -88,7 +88,6 @@ const Contact = () => {
 				<form
 					ref={form}
 					onSubmit={handleSubmit(sendEmail)}
-
 					className="flex flex-col items-center bg-red-50 p-0 m-2 md:m-0">
 					<div className="mb-4 md:w-1/2 w-full">
 						<label
@@ -181,8 +180,8 @@ const Contact = () => {
 						value="Send"
 						disabled={!captchaVerified || isAnimating}
 					>
-						<span className={`absolute text-center inset-0 w-[12rem] md:w-full h-20 md:h-11 transition duration-300 ease-out transform -translate-x-2 -translate-y-2 ${emailSuccess ? "bg-emerald-500 hover:bg-emerald-400" : "bg-red-300 hover:bg-red-400"} group-hover:translate-x-0 group-hover:translate-y-0`} ></span>
-						<span className="absolute text-center inset-0 w-[12rem] md:w-full  border-4 border-black h-20 md:h-11"></span>
+						<span className={`absolute text-center inset-0 w-[12rem] w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 ${emailSuccess ? "bg-emerald-500 hover:bg-emerald-400" : "bg-red-300 hover:bg-red-400"} group-hover:translate-x-0 group-hover:translate-y-0`} ></span>
+						<span className="absolute text-center inset-0 w-[12rem] w-full border-4 border-black h-full md:h-11"></span>
 						<span id="rewardId" className="relative">{emailSuccess ? "SUCCESSFULLY SENT!" : "SUBMIT"}</span>
 
 					</button>
