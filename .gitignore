@@ -23,3 +23,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.aws/
+/cloud/aws/.terraform/
+/aws/deploy/terraform.tfstate
+/aws/deploy/.terraform/
+/aws/deploy/terraform.tfstate.backup

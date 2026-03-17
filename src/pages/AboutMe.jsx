@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import profilePic from "./../assets/profilePic.JPG";
+import profilePic from "./../assets/profilepic.JPG";
 import gradPic from "./../assets/gradpic.jpg";
 import divider from "../assets/divider.png";
 import { BsGithub } from "react-icons/bs";
