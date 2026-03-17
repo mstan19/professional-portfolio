@@ -1,31 +1,6 @@
 version: '3.8'
 services:
-  nginx:
-    image: nginx:1.29-alpine
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./data/nginx:/etc/nginx/conf.d
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "localhost" ]
-      interval: 10s
-      timeout: 5s
-      retries: 3
-      start_period: 20s
-    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
   web:
-    depends_on:
-      nginx:
-        condition: service_healthy
     build: .
     ports:
       - "3000:3000"
