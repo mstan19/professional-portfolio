@@ -65,7 +65,6 @@ Github Repository: [https://github.com/mstan19/professional-portfolio]
 ## Installation
 
 ```
-clone github repo
 npm install
 npm run start
 ```
