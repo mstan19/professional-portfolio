@@ -26,7 +26,7 @@ resource "aws_instance" "this" {
   instance_type          = "t4g.small"
   vpc_security_group_ids = [aws_security_group.this.id]
   iam_instance_profile   = aws_iam_instance_profile.this.name
-  user_data              = file("scripts/user_data.sh")
+  user_data              = file("${path.module}/scripts/user_data.sh")
   tags                   = merge(var.tags, { "Name" : var.resource_prefix })
 }
 
