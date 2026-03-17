@@ -16,7 +16,7 @@ docker compose version
 
 # update docker buildx
 VERSION=$(curl -s https://api.github.com/repos/docker/buildx/releases/latest | jq -r .tag_name)
-wget https://github.com/docker/buildx/releases/download/${VERSION}/buildx-${VERSION}.linux-amd64 -O buildx
+wget https://github.com/docker/buildx/releases/download/${VERSION}/buildx-${VERSION}.linux-arm64 -O buildx
 mv buildx ~/.docker/cli-plugins/docker-buildx
 chmod +x ~/.docker/cli-plugins/docker-buildx
 # install git
