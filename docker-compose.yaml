@@ -9,6 +9,12 @@ services:
       - ./data/nginx:/etc/nginx/conf.d
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   certbot:
     image: certbot/certbot
